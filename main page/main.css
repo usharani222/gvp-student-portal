@@ -8,14 +8,21 @@ body{
     height: 50px;
 }
 nav{
+    width: 100% ,max-content;
     background-color: #BF2F31;
     color: #fff;
     padding: 10px;
     display: flex;
-    
     justify-content: space-between;
     align-items: center;
 }
+@media (max-width: 768px){
+    nav{
+        width: max-content;
+    }
+    
+}
+
 .logo{
     display: flex;
 }
@@ -36,14 +43,15 @@ nav ul{
     display: flex;
     justify-content: space-around;
     align-items: center;
-    margin-right: 5%;
+    margin-right: 8rem;
 }
 nav ul li{
     text-transform: uppercase;
     list-style: none;
-    margin-left: 20px;
+    margin-left: 4rem;
 }
 nav ul li a{
+    font-size: larger;
     font-family: Inter, sans-serif;
     font-weight: 700;
     text-decoration: none;
@@ -52,3 +60,26 @@ nav ul li a{
 nav ul li a:hover{
     color: #000;
 }
+#dropdown{
+    position: relative;
+    display: inline-block;
+}
+#dropdown-link{
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1 transparent;
+
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+#dropdown-link a{
+    color: black;
+    padding: 5px 16px;
+    text-decoration: none;
+    display: block;
+}
+#dropdown-link a:hover {background-color: rgb(236, 248, 255);}
+
+#dropdown:hover #dropdown-link {display: block}
+
